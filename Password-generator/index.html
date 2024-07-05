@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+        <div class="heading">
+            <h1>Password Generator by Mohsin Ahmed!</h1>
+        </div>
+        <!-- First Heading -->
+        <center>
+            <div class="text">
+                <div class="second-heading">
+                    <h2>Password Generator</h2>
+                </div>
+
+                <div class="input">
+                    <img class="eye-image" src="images/eye-solid.svg" alt="" id="eye" onclick="passwordVisibility()">
+                    <input type="text" placeholder="Generate Random Password" id="input-text">
+                </div>
+
+                <div class="length">
+                    <label>Password length</label>
+                    <input type="range" id="output-length" min="1" max="20" value="8"
+                        oninput="this.nextElementSibling.value = this.value">
+                    <output class="Numbers">8</output>
+                </div>
+
+                <div class="container">
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkboxes1">
+                        <span>Lowercase (a-z)</span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkboxes2">
+                        <span>Uppercase (A-Z)</span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkboxes3">
+                        <span>Numbers (0-9)</span>
+                    </div>
+                    <div class="checkbox">
+                        <input type="checkbox" id="checkboxes4">
+                        <span>Symbols (!$@#$)</span>
+                    </div>
+                </div>
+                
+            </div>
+        </center>
+    </div>
+
+    <div class="btn">
+        <button onclick="randomPassword()">Generate Random Password</button>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
